@@ -51,6 +51,10 @@
                   {%- include extensions/google-translate.html -%}
               </span>
             {%- endif -%}
+
+            {%- if search -%}
+              {%- include views/search-loader.html -%}
+            {%- endif -%}
           </div>
         </nav>
       {%- endif -%}
