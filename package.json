@@ -1,21 +1,21 @@
 {
-  "name": "jeykyll-theme-yat",
+  "name": "jekyll-theme-yat",
   "version": "1.0.0",
-  "description": "Elasticsearch box",
+  "description": "Elasticsearch Box",
   "main": "search.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeffreytse/jeykyll-theme-yat.git"
+    "url": "https://github.com/alexforks/jekyll-theme-yat.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jeffreytse/alexforks/issues"
+    "url": "https://github.com/alexforks/jekyll-theme-yat/issues"
   },
-  "homepage": "https://github.com/jeffreytse/alexforks#readme",
+  "homepage": "https://github.com/alexforks/jekyll-theme-yat#readme",
   "dependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
