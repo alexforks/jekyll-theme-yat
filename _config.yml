@@ -206,7 +206,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
-#  - searchyll
+  - searchyll
 
 exclude:
   - .sass-cache/
