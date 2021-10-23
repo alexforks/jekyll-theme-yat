@@ -95,6 +95,9 @@ I will respect your crucial support and say THANK YOU!
 - Diagram (PlantUML, Mermaid) support using [Jekyll Spaceship][jekyll-spaceship] gem.
 - Google Translation support.
 - New post tag support.
+- Search box powered by Elasticsearch.
+This is a temporary solution until [the universal solution](https://github.com/jeffreytse/jekyll-theme-yat/issues/32#issuecomment-945449981) comes out.
+See the [demo](https://alexzhangs.github.io) and [config](https://github.com/alexzhangs/alexzhangs.github.io).
 
 Also, visit the [Live Demo][yat-live-demo] site for the theme.
 
