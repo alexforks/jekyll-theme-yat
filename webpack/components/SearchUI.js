@@ -30,9 +30,9 @@ const GetToken = (url) => {
 // 2. Connect elasticsearch with searchkit =====================================
 // Set ES url - use a protected URL that only allows read actions.
 const token = PROTECTD_ELASTICSEARCH_URL ? GetToken(PROTECTD_ELASTICSEARCH_URL) : "";
-const url = PROTECTD_ELASTICSEARCH_URL ? PROTECTD_ELASTICSEARCH_URL.replace(token, "") : "";
+const url = PROTECTD_ELASTICSEARCH_URL ? PROTECTD_ELASTICSEARCH_URL.replace(token + "@", "") : "";
 const sk = new SearchkitManager(
-  url``,
+  url,
   {
     searchOnLoad:false,
     basicAuth:token
