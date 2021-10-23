@@ -208,20 +208,6 @@ plugins:
   - jekyll-spaceship
   - searchyll
 
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - .idea
-  - webpack
-
 # Elasticsearch Searchyll Options
 #   The following settings are processed by Searchyll.
 #   Full doc refer to: https://github.com/omc/searchyll#configuration
@@ -238,19 +224,19 @@ exclude:
 #                 The "readonly_url" is exposing to search.js.
 #   index_name: Optional. Default is "jekyll".
 #   ignore: Optional. No default.
-
-elasticsearch:
-  url: https://your-username:your-password@your-elasticsearch-server-url
-  readonly_url: https://your-username:your-password@your-elasticsearch-server-url
-  index_name: jekyll
-  ignore:
-   - /
-   - /assets/*
-   - /404.html
-   - /archives.html
-   - /categories.html
-   - /feed.xml
-   - /index.html
-   - /robots.txt
-   - /sitemap.xml
-   - /tags.html
+#
+# elasticsearch:
+#   url: https://your-username:your-password@your-elasticsearch-server-url
+#   readonly_url: https://your-username:your-password@your-elasticsearch-server-url
+#   index_name: jekyll
+#   ignore:
+#    - /
+#    - /assets/*
+#    - /404.html
+#    - /archives.html
+#    - /categories.html
+#    - /feed.xml
+#    - /index.html
+#    - /robots.txt
+#    - /sitemap.xml
+#    - /tags.html

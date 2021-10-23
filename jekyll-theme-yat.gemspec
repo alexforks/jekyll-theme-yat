@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.metadata["plugin_type"] = "theme"
 
   spec.files         = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r!^(assets|_data|_layouts|_includes|_sass|_plugins|webpack|package.json|webpack.config.js|LICENSE|README)!i)
+    f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README)!i)
   end
 
   spec.add_development_dependency "bundler", ">= 1.6", "< 3.0"
@@ -25,4 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.3"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
   spec.add_runtime_dependency "jekyll-spaceship", "~> 0.2"
+  spec.add_runtime_dependency "searchyll"
 end
