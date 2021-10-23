@@ -13,10 +13,24 @@ import {
 } from "searchkit";
 import * as _ from "lodash";
 
+const GetToken = (url) => {
+  let items = [];
+  if (url) {
+    items = url.split("//");
+      if (items.length > 1) {
+        items = items[1].split("@");
+          if (items.length > 0) {
+            items = items[0].split(":");
+          }
+      }
+  }
+  return items.join(":");
+}
+
 // 2. Connect elasticsearch with searchkit =====================================
 // Set ES url - use a protected URL that only allows read actions.
-const url = "{ELASTICSEARCH_URL}";
-const token = "{ELASTICSEARCH_TOKEN}";
+const token = PROTECTD_ELASTICSEARCH_URL ? GetToken(PROTECTD_ELASTICSEARCH_URL) : "";
+const url = PROTECTD_ELASTICSEARCH_URL ? PROTECTD_ELASTICSEARCH_URL.replace(token, "") : "";
 const sk = new SearchkitManager(
   url``,
   {

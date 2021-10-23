@@ -220,8 +220,8 @@ plugins:
 #        Elasticsearch server. Never push this setting into a public repository.
 #        Use an Environment Variable "ELASTICSEARCH_URL" instead to specify the
 #        "url" for your production.
-#   readonly_url: Optional. No default.
-#                 The "readonly_url" is exposing to search.js.
+#   readonly_url: Required. Supports auth and SSL: https://user:pass@someurl.com
+#                 The "readonly_url" is being exposed to the site source code.
 #   index_name: Optional. Default is "jekyll".
 #   ignore: Optional. No default.
 #
