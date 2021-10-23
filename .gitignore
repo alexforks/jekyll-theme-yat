@@ -1,5 +1,9 @@
 *.gem
 .bundle
 .sass-cache
+.idea
+.jekyll-cache
 _site
 Gemfile.lock
+package-lock.json
+node_modules

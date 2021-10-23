@@ -206,3 +206,37 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+  - searchyll
+
+# Elasticsearch Searchyll Options
+#   The following settings are processed by Searchyll.
+#   Full doc refer to: https://github.com/omc/searchyll#configuration
+#
+#   url: Required. Supports auth and SSL: https://user:pass@someurl.com
+#        Can also read URLs stored in environment variable named
+#        BONSAI_URL and ELASTICSEARCH_URL.
+
+#        The "url" contains the credential which can write data into your
+#        Elasticsearch server. Never push this setting into a public repository.
+#        Use an Environment Variable "ELASTICSEARCH_URL" instead to specify the
+#        "url" for your production.
+#   readonly_url: Required. Supports auth and SSL: https://user:pass@someurl.com
+#                 The "readonly_url" is being exposed to the site source code.
+#   index_name: Optional. Default is "jekyll".
+#   ignore: Optional. No default.
+#
+# elasticsearch:
+#   url: https://your-username:your-password@your-elasticsearch-server-url
+#   readonly_url: https://your-username:your-password@your-elasticsearch-server-url
+#   index_name: jekyll
+#   ignore:
+#    - /
+#    - /assets/*
+#    - /404.html
+#    - /archives.html
+#    - /categories.html
+#    - /feed.xml
+#    - /index.html
+#    - /robots.txt
+#    - /sitemap.xml
+#    - /tags.html

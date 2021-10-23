@@ -21,5 +21,8 @@
 
     {%- include views/footer.html -%}
 
+    {%- if search -%}
+      {%- include views/search.html -%}
+    {%- endif -%}
   </body>
 </html>
