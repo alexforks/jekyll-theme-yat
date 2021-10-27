@@ -13,6 +13,12 @@
     {%- include functions.html func='get_reading_time' -%}
     {% assign reading_time = return %}
     <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> {{ reading_time }}</span>
+
+    {% if page.revised and page.revised != page.date %}
+    <time class="dt-revised left-vsplit" datetime="{{ page.revised | date_to_xmlschema }}" itemprop="datePublished">
+      <i class="fa fa-pencil"></i> Revised {{ page.revised | date: date_format }}
+    </time>
+    {% endif %}
   </p>
 
   {%- if page.tags.size > 0 -%}
