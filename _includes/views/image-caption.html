@@ -1,0 +1,24 @@
+<style>
+  article img {
+    border-radius: 5px;
+  }
+  figcaption {
+    padding: 5px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.718;
+  }
+</style>
+<script>
+  var nodes = document.querySelector("article").querySelectorAll("img");
+  nodes.forEach(
+    function (img) {
+      var text = img.title || img.alt;
+      if (text) {
+        var caption = document.createElement("figcaption");
+        caption.append("Figure: " + text);
+        img.parentNode.append(caption);
+      }
+    }
+  );
+</script>
