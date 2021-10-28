@@ -87,7 +87,7 @@ const SearchUI = () => {
           </div>
           <div className="sk-layout__results">
             {/* search results */}
-            <Hits hitsPerPage={5}
+            <Hits hitsPerPage={10}
                   highlightFields={["title", "text"]}
                   customHighlight={{"fragment_size":30}}
                   itemComponent={HitItem}/>

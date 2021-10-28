@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0,0,0,.9);
   z-index: 1001;
   transition: all .5s ease-in-out;
@@ -25,25 +25,28 @@
   transform: translate(0,0) scale(1,1);
 }
 .sk-layout__wrapper {
-  max-width: 920px;
+  position: relative;
+  max-width: 1280px;
   margin: auto;
   padding-right: 30px;
   padding-left: 30px;
+  height: 100%;
 }
 .sk-layout__close {
-  position: absolute;
+  position: fixed;
   top: 29px;
   right: 3.5%;
   color: orangered;
   font-size: 20px;
   padding: 10px 20px;
   cursor: pointer;
+  z-index: 1002;
 }
 .sk-layout__top-bar {
   position: relative;
   margin: auto;
   background: transparent;
-  margin-top: 60px;
+  height: 100px;
 }
 .sk-layout__top-bar.is-focused {
   background: transparent !important;
@@ -60,22 +63,33 @@
 }
 .sk-layout__results {
   padding: 15px;
+  height: calc(100vh - 192px);
+  min-height: revert;
 }
 .sk-layout__filters, .sk-layout__results {
   background: transparent;
-  max-height: calc(100vh - 200px);
   overflow: scroll;
 }
+@media screen and (max-width: 800px) { .sk-layout__body .sk-layout__filters { display: none; } }
 .sk-search-box {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
   background: transparent;
   border-bottom: orangered 1px dashed;
 }
 .sk-search-box.is-focused {
   background: transparent;
 }
-.sk-search-box__text {
+.sk-search-box input.sk-search-box__text {
   text-align: center;
-  font-size: 30px !important;
+  font-size: 30px;
+  padding: 0;
+}
+.sk-panel {
+  padding-right: 15px;
+  border-right: #333333 1px solid;
 }
 .sk-panel__header {
   color: revert;
@@ -85,8 +99,6 @@
   color: revert;
 }
 .sk-hits, .ski-nohits {
-  padding-left: 15px;
-  border-left: #333333 1px solid;
 }
 .sk-hits-hit {
   padding-bottom: 15px;
