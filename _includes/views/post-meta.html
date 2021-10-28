@@ -1,0 +1,21 @@
+{%- assign post = include.post -%}
+
+<div class="post-meta">
+  {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
+  <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+    <i class="fa fa-calendar"></i> {{ post.date | date: date_format }}
+  </time>
+
+  {% assign article = post.content %}
+  {% assign lang = post.lang %}
+
+  {%- include functions.html func='get_reading_time' -%}
+  {% assign reading_time = return %}
+  <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> {{ reading_time }}</span>
+
+  {% if post.revised and post.revised != post.date %}
+  <time class="dt-revised left-vsplit" datetime="{{ post.revised | date_to_xmlschema }}" itemprop="dateRevised">
+    <i class="fa fa-pencil"></i> Revised on {{ post.revised | date: date_format }}
+  </time>
+  {% endif %}
+</div>
