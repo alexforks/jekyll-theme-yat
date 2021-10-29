@@ -10,15 +10,17 @@
   }
 </style>
 <script>
-  var nodes = document.querySelector("article").querySelectorAll("img");
-  nodes.forEach(
-    function (img) {
-      var text = img.title || img.alt;
-      if (text) {
-        var caption = document.createElement("figcaption");
-        caption.append("Figure: " + text);
-        img.parentNode.append(caption);
+  var nodes = document.querySelector("article");
+  if (nodes) {
+    nodes.querySelectorAll("img").forEach (
+      function (img) {
+        var text = img.title || img.alt;
+        if (text) {
+          var caption = document.createElement("figcaption");
+          caption.append("Figure: " + text);
+          img.parentNode.append(caption);
+        }
       }
-    }
-  );
+    )
+  }
 </script>
