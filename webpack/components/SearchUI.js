@@ -46,7 +46,7 @@ const HitItem = (props) => (
         dangerouslySetInnerHTML={{__html:_.get(props.result,"highlight.title",false) || props.result._source.title}}></div>
     </a>
     <div>
-      <small className={props.bemBlocks.item("hightlights")}
+      <small className={props.bemBlocks.item("highlights")}
         dangerouslySetInnerHTML={{__html:_.get(props.result,"highlight.text",'')}}></small>
     </div>
   </div>
@@ -71,7 +71,7 @@ const SearchUI = () => {
                        "NoHits.DidYouMean": "Search for {suggestion}."
                      }}
 
-                     queryFields={["text", "title"]}/>
+                     queryFields={["text", "title", "tags"]}/>
         </div>
         <InitialLoader/>
         <HitsStats/>
@@ -101,7 +101,6 @@ const SearchUI = () => {
         <div className="sk-layout__footer">
           Powered by
           &nbsp;<a href="https://searchkit.co" target="_blank">Searchkit</a>&nbsp;,
-          &nbsp;<a href="https://app.bonsai.io/" target="_blank">Bonsai</a>&nbsp;,
           &nbsp;<a href="https://www.elastic.co/" target="_blank">Elasticesearch</a>&nbsp;,&nbsp;&
           &nbsp;<a href="https://github.com/omc/searchyll" target="_blank">Searchyll</a>.
         </div>

@@ -82,10 +82,20 @@
 .sk-search-box.is-focused {
   background: transparent;
 }
+.sk-search-box.is-focused input.sk-search-box__text {
+  color: orangered;
+}
 .sk-search-box input.sk-search-box__text {
   text-align: center;
   font-size: 30px;
+  color: orangered;
   padding: 0;
+}
+.sk-search-box__icon {
+  visibility: hidden;
+  margin: 0;
+  width: 0;
+  height: 0;
 }
 .sk-panel {
   padding-right: 15px;
@@ -98,14 +108,20 @@
 .sk-item-list-option.is-selected .sk-item-list-option__text {
   color: revert;
 }
-.sk-hits, .ski-nohits {
-}
 .sk-hits-hit {
   padding-bottom: 15px;
 }
-.sk-hits-stats {
+.sk-hits-hit__title em {
+  font-style: normal;
+  font-weight: bold;
 }
-.sk-pagination-navigation {
+.sk-hits-hit__hightlights em {
+  font-style: normal;
+  color: orangered;
+}
+.sk-hits-stats {
+  font-style: italic;
+  text-align: center;
 }
 .sk-pagination-navigation.is-numbered {
   width: revert;
