@@ -19,6 +19,13 @@
   visibility: hidden;
   transform: translate(0,-100%) scale(0,0);
 }
+/* if backdrop support: very transparent and blurred */
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .sk-layout {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
 .sk-layout.is-active {
   opacity: 0.95;
   visibility: visible;
