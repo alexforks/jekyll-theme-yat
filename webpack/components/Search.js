@@ -10,7 +10,9 @@ const SearchLoader = () => {
   };
 
   return (
-    <span className="page-link sk-search-loader fa fa-search" onClick={openSearchUI} />
+    <span className="page-link">
+      <span className="sk-search-loader fa fa-search" onClick={openSearchUI} />
+    </span>
   )
 };
 
